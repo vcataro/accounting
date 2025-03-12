@@ -3,18 +3,22 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
   Box,
 } from "@mui/material";
-import NotificationBell from './components/Notifications/NotificationBell';
+
 import Login from './components/Login/Login';
 import MainApp from './components/Accounting/MainApp';
+import AppBarMenu from "./components/Accounting/AppBarMenu";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
 
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
-
-  const handleLogin = () => setIsAuthenticated(true);
+  const navigate=useNavigate();
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+    navigate('/', {replace : true});
+  }
   const handleLogout = () => setIsAuthenticated(false);
 
   return (
@@ -33,11 +37,12 @@ const App = () => {
             Home Grown Accounting
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Button variant="outlined" onClick={handleLogout} >Log Out</Button>
-            <NotificationBell
-              iconColor="black"
-              badgeContent={4}
-            />
+            {isAuthenticated ?
+              (
+                <AppBarMenu handleLogout={handleLogout}/>
+              )
+              : null
+            }
           </Box>
 
         </Toolbar>
@@ -53,8 +58,6 @@ const App = () => {
       }
     </Box>
   );
-
-
 
 };
 

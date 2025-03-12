@@ -8,46 +8,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { dashboardTheme } from './dashboardTheme';
 
 
-
-// const Root = () => {
-
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-//   const handleLogin = () => {
-//     // Simulate login logic
-//     setIsAuthenticated(true);
-//   };
-
-//   const handleLogout = () => {
-//     setIsAuthenticated(false);
-//   };
-
-//   return (
-//     <ThemeProvider theme={dashboardTheme}>
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={
-//             isAuthenticated ?
-//               (<App onLogout={handleLogout} />) :
-//               (<Navigate to="/login" replace />)
-
-//           }
-//           />
-//           <Route path="/login" element={
-//             isAuthenticated ?
-//               (<Navigate to="/" replace />) :
-//               (<Login onLogin={handleLogin} />)
-//           }
-//           />
-//           <Route path="authentication" element={<Authentication />} />
-//         </Routes>
-//       </BrowserRouter>
-//     </ThemeProvider>
-//   );
-// };
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Root />);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={dashboardTheme}>

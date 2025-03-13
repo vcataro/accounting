@@ -3,11 +3,13 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { iconButtonClasses } from '@mui/material';
 export const mainNavbarItems=[
     {
         id:0,
         icon:<HomeIcon/>,
         label:"Home",
+        subItems:null,
         route:"/"
 
     },
@@ -16,7 +18,13 @@ export const mainNavbarItems=[
         id:1,
         icon:<AccountBalanceIcon/>,
         label:"General Ledger",
-        route:"generalledger"
+        route:"",
+        subItems:[{
+            id:1,
+            icon:<AccountBalanceIcon/>,
+            label:"Account Setup",
+            route:"generalledger"
+        }]
 
     },
     {

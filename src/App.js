@@ -24,10 +24,9 @@ const App = () => {
   return (
     <Box sx={{
       height: "100vh", // Full viewport height
+      // width: "100vw",
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
       padding: 2, // Add padding for responsiveness
     }}>
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>

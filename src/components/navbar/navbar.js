@@ -60,7 +60,6 @@ const Navbar = () => {
                         key={subItem.id}
                         onClick={() =>
                            handleNavigation(subItem)}
-
                       >
                         <ListItemButton>
                           <ListItemIcon sx={navbarStyles.icons}>
@@ -93,27 +92,6 @@ const Navbar = () => {
           </React.Fragment>
         ))}
       </List>
-      {/* <List>
-        {mainNavbarItems.map((item, index) => (
-          <React.Fragment key={index}>
-            <ListItem
-              button
-              key={item.id}
-              onClick={() =>
-                item.subItem ? handleToggle(index) : handleNavigation(item)
-              }
-            >
-              <ListItemButton>
-                <ListItemIcon sx={navbarStyles.icons}>
-                  {item.icon}
-                </ListItemIcon>
-                <ListItemText sx={navbarStyles.text} primary={item.label} />
-              </ListItemButton>
-            </ListItem>
-          </React.Fragment>
-        ))}
-
-      </List> */}
       <Divider />
 
     </Drawer>

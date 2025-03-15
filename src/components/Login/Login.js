@@ -1,8 +1,15 @@
 import React from "react";
-import { Button, TextField,  Typography, Card, CardContent } from "@mui/material";
+import { Button, TextField,Box,  Typography, Card, CardContent } from "@mui/material";
 
 const Login = ({ onLogin }) => {
     return (
+      <Box sx={{
+        height: "100vh", // Full viewport height
+        display: "flex",
+        alignContent:"center",
+        justifyContent:"center",
+        alignItems:"center"
+      }}>
         <Card sx={{
             width: 400, padding: 2,
             boxShadow: 5, // Material-UI shadow level
@@ -18,6 +25,7 @@ const Login = ({ onLogin }) => {
                 </Button>
             </CardContent>
         </Card>
+        </Box>
     );
 };
 

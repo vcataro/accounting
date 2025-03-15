@@ -12,14 +12,18 @@ const drawerWidth = 240;
 
 const MainApp = () => {
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex",
+            // borderStyle:"solid",
+            // borderBlockWidth:"2px",
+            // borderBlockColor:"red"
+             }}>
             {/* Sidebar */}
             <Grid2 container>
                 <Navbar />
                 <Outlet />
             </Grid2>
             {/* Main Content */}
-            <Box component="main" sx={{ flexGrow: 1, p: 3, ml: `${drawerWidth}px` }}>
+            <Box component="main"  >
                 <Toolbar />
                 <AppRoutes/>
 
